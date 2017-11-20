@@ -16,13 +16,13 @@ return [
     'url'   			=> env('url', 'http://localhost:8001'),
     'secret_url'   		=> env('secret_url', 'http://localhost:8001'),
     'grant_type' 		=> env('grant_type','client_credentials'),
-    'languages' => [
-        'en'
-    ],
-    'multilingualSites' => [
-        'localhost'
-    ],
-    'tracking_hits' => true,
+
+    'languages' => [],
+    'is_multilingual' => false,
+
+    'tracking_hits' => false,
+
+    'domains' => [],
 
     'security_code' 	=> env('security_code', 'qwe123'),
 
