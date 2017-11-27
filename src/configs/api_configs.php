@@ -32,4 +32,5 @@ return [
     'not_found_redirect_seconds' => env('not_found_redirect_seconds', 0),
     'not_found_redirect_code' => env('not_found_redirect_code', 301),
     'not_found_redirect_mode' => env('not_found_redirect_mode', 'http'), // other option is "view"
+	'domains' => []
 ];
