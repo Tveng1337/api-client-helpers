@@ -402,8 +402,10 @@ class ACHController extends Controller
             'tracking_hits',
             'cache_frontend_for'
         ];
-        $has_domains = array_key_exists($dom, config('api_configs.domains')); 
-        $str = $has_domains ? 'api_configs.domains.'.$dom.'.' : 'api_configs.';
+        if(config('api_configs.domains')) {
+            $has_domains = array_key_exists($dom, config('api_configs.domains')); 
+            $str = $has_domains ? 'api_configs.domains.'.$dom.'.' : 'api_configs.';
+        }
         
         foreach ($keys as $key) {
             $conf[$key] = config($str.$key);
